@@ -1,0 +1,33 @@
+.container{
+    height: auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    
+}
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffb703;
+}
+.field{
+    padding: 15px;
+    font-size: 20px;
+}
+
+.actions .submit{
+    padding: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 6px;
+    border-color: #ffb703;
+    border-radius: 6px  ;
+    background-color: #ffb703;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.text{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px;
+}
