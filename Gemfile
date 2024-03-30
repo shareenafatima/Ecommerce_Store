@@ -66,5 +66,12 @@ group :test do
   gem "selenium-webdriver"
 end
 
+#install bundle
+
 gem 'devise'
 gem 'carrierwave'
+# gem 'imagemagick-identify', '~> 0.0.1'
+# gem 'imagemagick-binaries', '~> 6.8', '>= 6.8.7.5.1'
+gem 'mini_magick', '~> 4.12'
+gem 'paperclip'
+gem 'mimemagic', '~> 0.4.3'

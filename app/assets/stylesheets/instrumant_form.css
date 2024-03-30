@@ -1,24 +1,24 @@
-/* styles.css */
+ styles.css 
 
 /* Center-align heading */
 h1 {
     text-align: center;
   }
   
-  /* Center-align text field */
+ 
   input[type="text"] {
     display: block;
     margin: 0 auto;
   }
   
-  /* Center-align price field */
+  
   input[type="number"] {
     display: block;
     margin: 0 auto;
     text-align: center;
   }
   
-  /* Toggle switch style for brand */
+ 
   .toggle {
     position: relative;
     display: inline-block;
@@ -72,7 +72,7 @@ h1 {
     transform: translateX(26px);
   }
   
-  /* Button styles */
+ 
   .choose-image-button {
     display: inline-block;
     background-color: #007bff;
@@ -85,4 +85,4 @@ h1 {
   
   .choose-image-button:hover {
     background-color: #0056b3;
-  }
+  } 
