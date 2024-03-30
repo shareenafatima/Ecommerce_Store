@@ -11,42 +11,48 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :brand, style: "display: block" %>
-    <%= form.text_field :brand %>
+<div class='container'>
+   <div>
+    <%= form.label :title, style: "display: block", class:"title" %>
+    <%= form.text_field :title %>
   </div>
 
-  <div>
-    <%= form.label :model, style: "display: block" %>
+   <div>
+    <%= form.label :price, style: "display: block", class:"price" %>
+    <%= form.text_field :price %>
+  </div>
+
+   <div>
+    <%= form.label :model, style: "display: block", class:"model" %>
     <%= form.text_field :model %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
+   <div>
+    <%= form.label :description, style: "display: block", class:"description" %>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :condition, style: "display: block" %>
+    <%= form.label :brand, style: "display: block",class:"brand" %>
+    <%= form.text_field :brand %>
+  </div>
+
+<%= form.label :brand, "Brand", class: "brand" %>
+<%= form.select :brand, options_for_select([ ["None", 1], ["Brand 1", 1], ["Brand 2", 2], ["Brand 3", 3], ["Brand 4", 4], ["Brand 5", 5]]),  id: "brand-dropdown" %>
+
+  <div>
+    <%= form.label :condition, style: "display: block", class:"condition" %>
     <%= form.text_field :condition %>
   </div>
 
   <div>
-    <%= form.label :finish, style: "display: block" %>
-    <%= form.text_field :finish %>
-  </div>
-
+  <%=  form.file_field :image, class:'choose-image-button' %>
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
 
-  <div>
-    <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
-  </div>
-
-  <div>
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+
+<%= stylesheet_link_tag 'instrumant_form' %>
+<%= javascript_include_tag 'instrument_form' %>
