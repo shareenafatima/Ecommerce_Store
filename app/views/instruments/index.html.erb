@@ -1,15 +1,30 @@
 <p style="color: green"><%= notice %></p>
+<section class = "hero is-warning">
+<div class="hero-body">
 <div class="container">
-<h1>Instruments</h1>
+<h1 class = "title">
+Instruments</h1>
+</div>
+</div>
+</div>
+</section>
+<div class="instrument-index-grid pt4">
+<% @instruments.each do |instrument| %>
 
-<div id="instruments">
-  <% @instruments.each do |instrument| %>
+<div class="instrument border-light">
+<%= link_to image_tag(instrument.image_url(:thumb)), instrument if instrument.image.present? %>
+<% if instrument.condition? %>
+<div class="condition">
+<span class="tag is-dark"><%= instrument.condition %></span>
+</div>
+</div>
+</div>
+<% end %>
     <%= render instrument %>
     <p>
       <%= link_to "Show this instrument", instrument %>
     </p>
   <% end %>
-</div>
+
 
 <%= link_to "New instrument", new_instrument_path %>
-</div>

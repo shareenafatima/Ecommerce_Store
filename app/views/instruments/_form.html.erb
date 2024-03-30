@@ -32,13 +32,21 @@
     <%= form.text_area :description,class:"text" %>
   </div>
 
-<%= form.label :brand, "Brand", class: "brand" %><br />
-<%= form.select :brand, options_for_select([ ["None", 1], ["Brand 1", 1], ["Brand 2", 2], ["Brand 3", 3], ["Brand 4", 4], ["Brand 5", 5]]),  id: "brand-dropdown" %>
-
-  <div>
-    <%= form.label :condition, style: "display: block", class:"condition" %>
-    <%= form.text_field :condition,class:"text" %>
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.select :brand, Instrument::BRAND, prompt: "Select brand" %>
   </div>
+
+  <div class="field">
+    <%= form.label :condition %>
+    <%= form.select :condition, Instrument::CONDITION, prompt: "Select condition" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finish %>
+    <%= form.select :finish, Instrument::FINISH, prompt: "Select finish" %>
+  </div>
+
 
   <div>
   <%=  form.file_field :image, class:'choose-image-button' %>
